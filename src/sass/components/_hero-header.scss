@@ -1,0 +1,109 @@
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #ffb8ca;
+  height: 502px;
+  padding-top: 6px;
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.container__header {
+  display: flex;
+  margin-bottom: 137px;
+
+  background-image: url();
+}
+
+.logo {
+  display: inline-block;
+  font-size: 26px;
+  text-decoration: none;
+  margin-right: auto;
+  color: #d41443;
+}
+
+.logo-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #d41443;
+}
+
+.header__menu-btn {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-btn__icon {
+  display: block;
+  fill: #d41443;
+}
+
+// Hero
+
+.hero {
+  z-index: 10;
+  position: relative;
+  max-width: 218px;
+
+  &__link--products {
+    max-width: 63px;
+    height: 24px;
+
+    color: #fff;
+    text-decoration: none;
+    background-color: #d41443;
+    font-size: 8px;
+    border-radius: 20px;
+    padding: 5px 15px;
+  }
+
+  &__link--about {
+    max-width: 83px;
+    height: 24px;
+
+    color: #d41443;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 8px;
+    border-radius: 20px;
+    padding: 5px 15px;
+  }
+}
+
+.hero__title {
+  font-size: 26px;
+  line-height: 1.14;
+  color: #fff;
+  margin-bottom: 19px;
+
+  &--accent {
+    color: #d41443;
+  }
+}
+
+// Decorative
+.decorative-circle {
+  z-index: 1;
+  width: 346px;
+  height: 346px;
+  background-color: #ffa5ba;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 83px;
+  left: 36px;
+}
