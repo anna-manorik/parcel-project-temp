@@ -1,0 +1,144 @@
+$main-margin-and-padding: 25px;
+
+.contacts-section {
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            $light-text-color 5%, 
+            $section-dark-background 5%);
+    padding-bottom: 113px; 
+}
+
+.contacts-section__container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobile){
+        width: $mobile;
+    }
+    
+    @media screen and (min-width: $tablet){
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop){
+        width: $desktop;
+    }
+}
+
+.contacts-section__title {
+    @extend %visually-hidden;
+}
+
+.contacts-section__item:not(:last-child) {
+    @media screen and (max-width: $tablet - 1px) {
+        margin-bottom: 20px;
+    }
+}
+
+.contacts-section__item:last-child {
+    margin-bottom: 54px;
+}
+
+.contacts-section__item {
+    padding: 43px 20px;
+
+    background-color: $light-text-color;
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px $contacts-section-shadow-color;
+}
+
+.contacts-section__category {
+    display: inline;
+    padding: 0 24px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+
+    color: $light-text-color;
+
+    background-color: $second-product-card-color;
+    border-radius: 4px;
+}
+
+.contacts-section__category-secondary {
+    background-color: $third-product-card-color; 
+}
+
+.contacts-section__box:not(:last-child) {
+    padding-top: $main-margin-and-padding;
+    padding-bottom: $main-margin-and-padding;
+    border-bottom: 1px solid $feedback-quotes-color;
+}
+.contacts-section__box:last-child {
+    padding-top: $main-margin-and-padding;
+}
+
+.contacts-section__subtitle {
+    margin-bottom: 10px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+}
+
+.contacts-section__representation-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: $middle-text-color;
+}
+
+.contacts-section__workdays {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+}
+
+.contacts-section__work-time {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+
+    color: $title-label-color;
+}
+
+.contacts-section__work-time:not(:last-child) {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contacts-section__link {
+    display: block;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: $middle-text-color;
+}
+
+.contacts-section__button-location {
+    @extend %contacts-section__buttons;
+    margin-bottom: 10px;
+
+    background-color: $location-button-background;
+    color: $light-text-color;
+}
+
+.contacts-section__button-franchise {
+    @extend %contacts-section__buttons;
+    background-color: $light-text-color;
+    color: $main-title-color;
+
+    &:hover, &:focus {
+        background-color: $button-hover-background;
+    }
+}
