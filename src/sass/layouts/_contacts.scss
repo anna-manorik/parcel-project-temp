@@ -12,20 +12,6 @@ $main-margin-and-padding: 25px;
 .contacts-section__container {
     padding-left: 50px;
     padding-right: 50px;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media screen and (min-width: $mobile){
-        width: $mobile;
-    }
-    
-    @media screen and (min-width: $tablet){
-        width: $tablet;
-    }
-
-    @media screen and (min-width: $desktop){
-        width: $desktop;
-    }
 }
 
 .contacts-section__title {
@@ -54,10 +40,7 @@ $main-margin-and-padding: 25px;
     display: inline;
     padding: 0 24px;
 
-    font-weight: 500;
-    font-size: 12px;
     line-height: 1.83;
-    letter-spacing: 0.04em;
 
     color: $light-text-color;
 
@@ -81,30 +64,18 @@ $main-margin-and-padding: 25px;
 .contacts-section__subtitle {
     margin-bottom: 10px;
 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
     line-height: 1.83;
-    letter-spacing: 0.04em;
 }
 
 .contacts-section__representation-text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
-
     color: $middle-text-color;
 }
 
 .contacts-section__workdays {
-    font-weight: 500;
-    font-size: 12px;
     line-height: 1.83;
 }
 
 .contacts-section__work-time {
-    font-weight: 500;
-    font-size: 12px;
     line-height: 1.83;
 
     color: $title-label-color;
@@ -117,10 +88,6 @@ $main-margin-and-padding: 25px;
 
 .contacts-section__link {
     display: block;
-
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
 
     color: $middle-text-color;
 }
