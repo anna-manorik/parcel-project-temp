@@ -8,6 +8,30 @@
 
   background-size: cover;
   padding-bottom: 86px;
+
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+      to bottom,
+      $section-dark-background 23%,
+      $light-text-color 23%
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      $section-dark-background 30%,
+      $light-text-color 30%
+    );
+  }
+
+  @media screen and (min-width: 1230px) {
+    background-image: linear-gradient(
+      to bottom,
+      $section-dark-background 32.5%,
+      $light-text-color 32.5%
+    );
+  }
 }
 
 .gallery__container {
