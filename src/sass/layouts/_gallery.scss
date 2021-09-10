@@ -1,0 +1,27 @@
+.gallery {
+  background-image: linear-gradient(to bottom, $section-dark-background 23%, $light-text-color 23%);
+  background-size: contain;
+  margin: 0 auto;
+  text-align: center;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  padding-bottom: 86px;
+}
+
+.gallery__container {
+  padding: 0;
+}
+
+.gallery__name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}

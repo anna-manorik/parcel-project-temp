@@ -1,0 +1,84 @@
+.advantages {
+  background: $section-dark-background;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.advantages__name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.advantages__list {
+  padding-bottom: 91px;
+}
+
+.advantages__item {
+  width: 230px;
+  height: 156px;
+}
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+.advantages__number {
+  font-family: $title-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-title-color;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__number::before {
+  content: '';
+
+  display: inline-block;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+}
+.advantages__number--first::before {
+  content: '';
+  width: 33px;
+  height: 50px;
+  background-image: url(../images/icon-cup.png);
+}
+
+.advantages__number--second::before {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/icon-apples.png);
+}
+
+.advantages__number--third::before {
+  width: 44px;
+  height: 50px;
+  background-image: url(../images/icon-heart.png);
+}
+
+.advantages__text {
+  font-family: $main-font-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: $dark-text-color;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
