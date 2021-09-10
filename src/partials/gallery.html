@@ -1,0 +1,20 @@
+<section class="gallery">
+  <div class="container gallery__container">
+    <h1 class="gallery__name">gallery</h1>
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="/images/desk-gallery.jpg 1x, /images/desk-gallery@2x.jpg 2x"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="/images/tab-gallery.jpg 1x, /images/tab-gallery@2x.jpg 2x"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="/images/mob-gallery.jpg 1x, /images/mob-gallery@2x.jpg 2x"
+      />
+      <img src="/images/mob-gallery.jpg" alt="фотографии людей" />
+    </picture>
+  </div>
+</section>
