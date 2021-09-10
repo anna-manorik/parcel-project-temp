@@ -9,25 +9,27 @@ h1 {
 }
 
 .container {
-  max-width: 320px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
 }
 
 .navigator {
   display: flex;
+  align-items: center;
 }
 
 .logo {
-  display: inline-block;
+  display: block;
   font-size: 26px;
   text-decoration: none;
   margin-right: auto;
-  color: #d41443;
+  color: $main-title-color;
+  font-family: $title-font-family;
 
   padding-top: 6px;
 }
@@ -37,19 +39,21 @@ h1 {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #d41443;
-}
-
-.header__menu-btn {
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
+  background-color: $main-title-color;
 }
 
 .menu-btn__icon {
   display: block;
-  fill: #d41443;
+  fill: $dark-text-color;
+  transition: fill 250ms ease-in-out;
+}
+
+.header__menu-btn {
+  display: block;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 // Hero
@@ -57,25 +61,36 @@ h1 {
 .hero__title {
   max-width: 218px;
 
+  position: relative;
+
   font-size: 26px;
   line-height: 1.14;
-  color: #fff;
+  font-weight: 400;
+  color: $light-text-color;
   margin-bottom: 19px;
+  font-family: $title-font-family;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 
   &--accent {
-    color: #d41443;
+    color: $main-title-color;
+    font-size: 48px;
   }
 }
 
 .hero__links {
   display: flex;
+  position: relative;
+
+  font-family: $main-font-family;
 }
 
 .hero {
-  background-color: #ffb8ca;
+  background-color: $hero-background-color;
 
-  padding-top: 137px;
+  padding-top: 160px;
   padding-bottom: 160px;
+  overflow: hidden;
 
   &__link--products {
     display: flex;
@@ -86,15 +101,15 @@ h1 {
     min-width: 63px;
     height: 24px;
 
-    color: #fff;
+    color: $light-text-color;
     text-decoration: none;
-    background-color: #d41443;
+    background-color: $main-title-color;
     font-size: 8px;
     border-radius: 20px;
 
     &:hover,
     &:focus {
-      background-color: #c7133e;
+      background-color: $slide-dot-dark-color;
     }
   }
 
@@ -106,30 +121,45 @@ h1 {
     min-width: 83px;
     height: 24px;
 
-    color: #d41443;
+    color: $main-title-color;
     text-decoration: none;
-    background-color: #fff;
+    background-color: $light-text-color;
     font-size: 8px;
     border-radius: 20px;
 
     &:hover,
     &:focus {
-      background-color: #ecebeb;
+      background-color: $button-hover-background;
     }
   }
 }
 
+// Hero section
+.hero-container {
+  position: relative;
+}
+
 // Decorative
-.decorative-circle {
-  z-index: 1;
+
+.hero__circle {
   width: 346px;
   height: 346px;
-  background-color: #ffa5ba;
   border-radius: 50%;
-
   position: absolute;
-  top: 83px;
+  top: -103px;
   left: 36px;
+  background-color: $title-label-color;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: -75px;
+    left: 80px;
+    width: 171px;
+    height: 410px;
+    background-size: contain;
+    background-image: url(./../images/mob-hero-icecream@2x.png);
+  }
 }
 
 // Mobile menu
@@ -149,7 +179,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
 
-  background-color: #e17992;
+  background-color: $mobile-menu-background;
 
   padding: 20px 21px;
 
@@ -164,8 +194,8 @@ h1 {
 .menu-close-btn {
   align-self: flex-end;
   display: flex;
-  width: 14px;
-  height: 14px;
+  // width: 14px;
+  // height: 14px;
   background-color: transparent;
   border: none;
   margin: 0;
@@ -176,46 +206,72 @@ h1 {
 .buy-now-btn {
   align-self: center;
 
+  font-family: $main-font-family;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+
   width: 209px;
   display: block;
   height: 44px;
-  background-color: #fff;
-  color: #d41443;
+  background-color: $light-text-color;
+  color: $main-title-color;
   border: none;
   border-radius: 22px;
 
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 
   &:hover,
   &:focus {
-    background-color: #ecebeb;
+    background-color: $button-hover-background;
   }
 }
 
 .mobile-nav {
   margin: 0;
   padding: 0;
+  font-family: $main-font-family;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
   &__item {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 22px;
+
+    height: 42px;
+    display: flex;
   }
 
   &__link {
-    color: #fff;
+    color: $light-text-color;
     text-decoration: none;
     padding: 11px 0;
 
     &:hover,
     &:focus {
-      color: #d41443;
+      color: $main-title-color;
     }
   }
 }
 
-.mobile-nav__item:last-child {
-  margin-bottom: 0;
+.mobile-nav__item::before {
+  content: '';
+  border-top: 1px solid $mobile-menu-border;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.mobile-nav__item:last-child::after {
+  content: '';
+  border-bottom: 1px solid $mobile-menu-border;
+  width: 250px;
+  position: absolute;
+  top: 331px;
+  left: 0;
 }
