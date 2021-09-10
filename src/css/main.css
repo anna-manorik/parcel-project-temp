@@ -244,6 +244,18 @@ img {
   padding: 0 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    padding: 0 115px;
+  }
+}
+
 .advantages__name {
   position: absolute;
   width: 1px;
@@ -261,9 +273,46 @@ img {
   padding-bottom: 91px;
 }
 
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 142px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__list {
+    padding-bottom: 139px;
+  }
+}
+
 .advantages__item {
   width: 230px;
   height: 156px;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    width: 180px;
+    height: 222px;
+    margin: 0;
+  }
+  .advantages__item:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__item {
+    width: 330px;
+    height: 222px;
+    margin: 0;
+  }
+  .advantages__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .advantages__item:not(:last-child) {
@@ -288,11 +337,38 @@ img {
           flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .advantages__number {
+    margin-bottom: 13px;
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__number {
+    margin-bottom: 15px;
+    font-size: 58px;
+    line-height: 1.24;
+  }
+}
+
 .advantages__number::before {
   content: '';
   display: inline-block;
   margin-bottom: 16px;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__number::before {
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__number::before {
+    margin-bottom: 40px;
+  }
 }
 
 .advantages__number--first::before {
@@ -323,6 +399,19 @@ img {
   color: #000000;
   letter-spacing: 0.02em;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .advantages__text {
+    font-size: 16px;
+    line-height: 1.76;
+  }
 }
 
 .gallery {
@@ -373,3 +462,4 @@ img {
   -webkit-transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/*# sourceMappingURL=main.css.map */
