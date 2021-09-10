@@ -1,20 +1,30 @@
 <header class="header">
   <div class="container">
-    <div class="decorative-circle"></div>
-    <div class="container__header">
+    <div class="navigator">
       <a href="#" class="logo"><span class="logo-icon"></span> Icecream</a>
-      <button class="header__menu-btn">
+      <button
+        class="header__menu-btn js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         <svg width="20" height="12" aria-label="open button side menu">
           <use class="menu-btn__icon" href="/images/svg/symbol-defs.svg#burger"></use>
         </svg>
       </button>
     </div>
-    <div class="hero">
-      <h1 class="hero__title">
-        ice cream made with <span class="hero__title--accent">passion</span>
-      </h1>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title--accent">passion</span>
+    </h1>
+    <div class="hero__links">
       <a href="#" class="hero__link--products">Products</a>
       <a href="#" class="hero__link--about">How it’s made?</a>
     </div>
   </div>
-</header>
+</section>
+
+<!-- <div class="decorative-circle"></div> -->
