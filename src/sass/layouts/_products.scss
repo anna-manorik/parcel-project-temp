@@ -1,0 +1,193 @@
+// h1,
+// h2,
+// h3,
+// ul,
+// p {
+//   padding: 0;
+//   margin: 0;
+// }
+
+// // Списки без маркеров
+// ul {
+//   list-style: none;
+// }
+
+// .container {
+//   width: 320px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
+
+.products-section {
+  background-color: $section-light-background;
+  padding-top: 121px;
+  padding-bottom: 98px;
+}
+
+.products-section__item {
+  width: 280px;
+  height: 485px;
+  border-radius: 24px;
+}
+
+.products-section__item--first {
+  position: relative;
+  background-color: $hero-background-color;
+  margin-bottom: 146px;
+  padding: 161px 15px 41px 16px;
+}
+
+.products-section__item--second {
+  position: relative;
+  background-color: $second-product-card-color;
+  margin-bottom: 113px;
+  padding: 145px 16px 57px 15px;
+}
+
+.products-section__item--third {
+  position: relative;
+  background-color: $third-product-card-color;
+  padding: 161px 15px 41px 16px;
+}
+
+// лейбл заголовка
+.products-section__title--subtitle {
+  font-family: $title-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-label-color;
+  margin-bottom: 15px;
+}
+
+.products-section__title {
+  font-family: $title-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-title-color;
+  margin-bottom: 144px;
+}
+
+.products-section__subtitle {
+  font-family: $title-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $light-text-color;
+  margin-bottom: 66px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 6px;
+    position: absolute;
+    top: 214px;
+    left: 127px;
+    background-image: url('../images/ellipsis.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-section__subtitle::after {
+    background-image: url('../images/ellipsis@2x.png');
+  }
+}
+
+.products-section__subtitle--first {
+  &::before {
+    content: '';
+    display: block;
+    width: 249px;
+    height: 252px;
+    position: absolute;
+    bottom: 346px;
+    background-image: url('../images/mob-productcard1.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-section__subtitle--first {
+    background-image: url('../images/mob-productcard1@2x.png');
+  }
+}
+
+.products-section__subtitle--second {
+  &::before {
+    content: '';
+    display: block;
+    width: 249px;
+    height: 252px;
+    position: absolute;
+    bottom: 362px;
+    background-image: url('../images/mob-productcard2.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-section__subtitle--second {
+    background-image: url('../images/mob-productcard2@2x.png');
+  }
+}
+
+.products-section__subtitle--third {
+  &::before {
+    content: '';
+    display: block;
+    width: 249px;
+    height: 252px;
+    position: absolute;
+    bottom: 346px;
+    background-image: url('../images/mob-productcard3.png');
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-section__subtitle--third {
+    background-image: url('../images/mob-productcard3@2x.png');
+  }
+}
+
+.products-section__description {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $light-text-color;
+  padding-left: 25px;
+  padding-right: 24px;
+  margin-bottom: 30px;
+}
+
+.products-section__button {
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-section__icon {
+  // fill: $main-title-color;
+  width: 40px;
+  height: 40px;
+}
