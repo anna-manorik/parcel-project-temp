@@ -1,0 +1,120 @@
+.about {
+  @media screen and (max-width: 767px) {
+    background-color: $section-dark-background;
+    padding: 125px 0 40px;
+    background-repeat: no-repeat;
+    background-position: right 50% bottom 95px;
+    background-size: 320px;
+    background-image: url(/images/about__bgi--mob.png);
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+    (min-resolution: 192dpi) and (max-width: 767px),
+    (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: url(/images/about__bgi--mob@2x.png);
+    padding: 125px 0 40px;
+    background-repeat: no-repeat;
+    background-position: right 50% bottom 130px;
+    background-size: 320px;
+  }
+}
+.about__suptitle {
+  font-family: $title-font-family;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-label-color;
+
+  @media screen and (max-width: 767px) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    margin-bottom: 15px;
+  }
+}
+
+.about__title {
+  font-family: $title-font-family;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $main-title-color;
+
+  @media screen and (max-width: 767px) {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 26px;
+  }
+}
+
+.about__image {
+  @media screen and (max-width: 767px) {
+    margin: 0 auto 45px;
+  }
+}
+
+.about__info {
+  margin: 0 auto;
+  width: 220px;
+  text-align: left;
+}
+.about__description {
+  color: $dark-text-color;
+
+  @media screen and (max-width: 767px) {
+    width: 220px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    margin-bottom: 45px;
+  }
+}
+.about__text {
+  font-style: normal;
+  color: $middle-text-color;
+
+  @media screen and(max-width:767px) {
+    width: 220px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.about__text--second {
+  @media screen and(max-width:767px) {
+  }
+}
+
+.about__button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #ffffff;
+  border-radius: 22px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  width: 176px;
+  height: 44px;
+  color: $main-title-color;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-background;
+  }
+}
+
+.button--more {
+  margin-left: 10px;
+}
