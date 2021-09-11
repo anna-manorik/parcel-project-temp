@@ -97,7 +97,7 @@ footer {
   
     &:hover,
     &:focus {
-      background-color: $accent-color;
+      background-color: $hero-background-color;
     }
   
     @media screen and (min-width: 768px) {
@@ -158,7 +158,7 @@ footer {
   }
   
   .footer-tel {
-    color: $accent-color;
+    color: $hero-background-color;
   }
   
   .copyright {
@@ -176,11 +176,11 @@ footer {
     margin-top: 25px;
     margin-bottom: 0;
   
-    font-family: $primary-font;
+    font-family:$main-font-family;
     font-weight: 700;
     font-size: 14px;
     line-height: 152%;
-    color: $contacts-color;
+    color: $mobile-menu-background;
   
     @media screen and (min-width: 768px) {
       width: 300px;
