@@ -18,13 +18,17 @@
   justify-content: center;
   align-items: center;
 
-  margin-left: auto;
-  margin-right: auto;
+  @media screen and (max-width: $tablet - 1px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
   min-width: 161px;
   min-height: 44px;
   border-radius: 22px;
-  
-  font-family: $main-font-family;
+  @media screen and (min-width: $tablet) {
+    min-width: 191px;
+  }
+ 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
