@@ -94,12 +94,19 @@
   }
 }
 
+.about__label {
+}
+.read-more {
+}
 .about__button {
+  display: inline-block;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  padding-top: 14px;
   border: none;
   background: #ffffff;
   border-radius: 22px;
+  text-align: center;
   cursor: pointer;
   font-style: normal;
   font-weight: 700;
@@ -113,6 +120,25 @@
   &:focus {
     background-color: $button-hover-background;
   }
+}
+.about__text.checked {
+  display: none;
+}
+
+.about--check:checked + .about__text.checked {
+  display: inline-block;
+}
+
+.about--check:checked ~ .about__label .read-more {
+  display: none;
+}
+
+.about--check:checked ~ .about__label .read-less {
+  display: inline-block;
+}
+
+.read-less {
+  display: none;
 }
 
 .button--more {
