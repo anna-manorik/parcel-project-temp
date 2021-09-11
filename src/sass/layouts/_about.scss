@@ -3,7 +3,7 @@
     background-color: $section-dark-background;
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% bottom 95px;
+    background-position: right 50% top 775px;
     background-size: 320px;
     background-image: url(/images/about__bgi--mob.png);
   }
@@ -13,7 +13,7 @@
     background-image: url(/images/about__bgi--mob@2x.png);
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% bottom 130px;
+    background-position: right 50% top 775px;
     background-size: 320px;
   }
 }
@@ -94,15 +94,11 @@
   }
 }
 
-.about__label {
-}
-.read-more {
-}
 .about__button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0;
-  padding-top: 14px;
   border: none;
   background: #ffffff;
   border-radius: 22px;
@@ -115,6 +111,7 @@
   width: 176px;
   height: 44px;
   color: $main-title-color;
+  transition: background-color $transition-duration $transition-timing-function;
 
   &:hover,
   &:focus {
@@ -134,7 +131,7 @@
 }
 
 .about--check:checked ~ .about__label .read-less {
-  display: inline-block;
+  display: flex;
 }
 
 .read-less {
