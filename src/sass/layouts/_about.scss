@@ -1,0 +1,48 @@
+.about {
+  @media screen and (max-width: 767px) {
+    background-color: $section-dark-background;
+    padding-top: 125px;
+    padding-bottom: 40px;
+  }
+}
+.about__suptitle {
+  font-family: $title-font-family;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-label-color;
+  @media screen and (max-width: 767px) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    margin-bottom: 15px;
+  }
+}
+.about__title {
+  font-family: $title-font-family;
+  font-style: normal;
+  text-transform: uppercase;
+  color: $main-title-color;
+
+  @media screen and (max-width: 767px) {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 26px;
+  }
+}
+.about__description {
+}
+.about__text {
+}
+.button {
+}
+.button--more {
+}
+.visually-hidden {
+}
