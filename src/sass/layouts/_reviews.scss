@@ -1,0 +1,158 @@
+/*обнулюяю відступи окремих елементів**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+/*задаю значення та спосіб відображення всіх елементів img*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*Прибирає маркери списку*/
+ul {
+  list-style: none;
+}
+
+/*параметри контейнера*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #fff;
+  padding-top: 123px;
+  padding-bottom: 132px;
+}
+
+/*мобільний*/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 480px;
+  }
+}
+/*планшет*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+/*десктоп*/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/*====Slider====*/
+.slider {
+  width: 926px;
+  overflow: hidden;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slides {
+  width: 300%;
+  display: flex;
+}
+
+.input {
+  position: absolute;
+  visibility: hidden;
+}
+.navigation {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label:not(:last-child) {
+  margin-right: 18px;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+  fill: #d9d9d9;
+}
+.icon_checked {
+  fill: #d31342;
+}
+
+.input1:checked ~ .s1 {
+  margin-left: 0%;
+}
+
+.input2:checked ~ .s1 {
+  margin-left: -33.33%;
+}
+.input3:checked:checked ~ .s1 {
+  margin-left: -66.66%;
+}
+
+/*===Content===*/
+
+.slide {
+  width: 926px;
+  transition: all 500ms ease;
+  flex-direction: column;
+  text-align-last: center;
+}
+
+.review_box::after {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  display: block;
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: red;
+  transform: translateX(-50%);
+
+  box-shadow: -10px 0 0 0 red, 10px 0 0 0 red;
+}
+.review_box::before {
+  position: absolute;
+  left: 50px;
+  top: 32px;
+  content: '';
+  display: block;
+  width: 54px;
+  height: 40px;
+  background-image: url(/images/image1.png);
+}
+.photo {
+  margin: 0 auto;
+}
+.review_box {
+  width: 100%;
+  position: relative;
+  padding: 47px 54px 32px 50px;
+  margin-top: 15px;
+  margin-bottom: 34px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+.review {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: repeating-linear-gradient(to top, #e1e1e1, #e1e1e1 1px, #fafafa 1px, #fafafa 30px);
+}
+
+.subtitle {
+  display: inline-block;
+  margin-bottom: 35px;
+}
