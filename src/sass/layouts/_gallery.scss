@@ -25,7 +25,7 @@
     );
   }
 
-  @media screen and (min-width: 1230px) {
+  @media screen and (min-width: 1280px) {
     background-image: linear-gradient(
       to bottom,
       $section-dark-background 32.5%,
@@ -36,6 +36,14 @@
 
 .gallery__container {
   padding: 0;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
 }
 
 .gallery__name {
