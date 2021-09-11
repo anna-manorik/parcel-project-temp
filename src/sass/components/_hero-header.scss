@@ -8,6 +8,12 @@ h1 {
   position: absolute;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    top: 40px;
+  }
+}
+
 .container {
   width: 320px;
   margin-left: auto;
@@ -18,9 +24,19 @@ h1 {
   // outline: 1px solid tomato;
 }
 
-.navigator {
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+.navigation {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
@@ -33,6 +49,10 @@ h1 {
   font-family: $title-font-family;
 
   padding-top: 6px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
 }
 
 .logo-icon {
@@ -57,7 +77,25 @@ h1 {
   padding: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .header__menu-btn {
+    margin-right: 30px;
+  }
+}
+
 // Hero
+.hero-container {
+  position: relative;
+}
+
+.hero__text {
+  position: absolute;
+  margin-top: 180px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 102px;
+  }
+}
 
 .hero__title {
   max-width: 218px;
@@ -68,7 +106,7 @@ h1 {
   line-height: 1.14;
   font-weight: 400;
   color: $light-text-color;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   font-family: $title-font-family;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -79,18 +117,28 @@ h1 {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 22px;
+    max-width: 162px;
+
+    &--accent {
+      font-size: 34px;
+    }
+  }
+}
+
 .hero__links {
   display: flex;
   position: relative;
-
+  margin-bottom: 66px;
   font-family: $main-font-family;
 }
 
 .hero {
   background-color: $hero-background-color;
 
-  padding-top: 160px;
-  padding-bottom: 160px;
+  height: 500px;
   overflow: hidden;
 
   &__link--products {
@@ -135,9 +183,96 @@ h1 {
   }
 }
 
-// Hero section
-.hero-container {
-  position: relative;
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+.hero__milk-dscr {
+  width: 120px;
+  font-family: $main-font-family;
+  color: $light-text-color;
+  font-size: 8px;
+  line-height: 1.5;
+
+  margin: 0 0 0 120px;
+}
+
+.hero__milk-btn {
+  background-color: #f3f3f3;
+
+  border-style: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  margin: 7px 0 0 120px;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 124px;
+    height: 126px;
+    background-image: url(./../images/tab-milk-hero.png);
+  }
+}
+
+.hero__right-decor {
+  position: absolute;
+  right: 44px;
+  top: 94px;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    right: 0px;
+    top: 173px;
+    background-image: url(./../images/tab-baby-hero.png);
+    width: 168px;
+    height: 133px;
+  }
+}
+
+.right-decor__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  max-width: 51px;
+
+  font-family: $main-font-family;
+  font-size: 8px;
+  line-height: 1;
+  color: $light-text-color;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    right: -8px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $light-text-color;
+  }
+
+  &--accent {
+    position: relative;
+    z-index: 10;
+
+    font-family: $title-font-family;
+    color: $main-title-color;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &:first-child {
+    margin-bottom: 14px;
+  }
 }
 
 // Decorative
@@ -147,7 +282,7 @@ h1 {
   height: 346px;
   border-radius: 50%;
   position: absolute;
-  top: -103px;
+  top: 79px;
   left: 36px;
   background-color: $title-label-color;
 
@@ -160,6 +295,23 @@ h1 {
     height: 410px;
     background-size: contain;
     background-image: url(./../images/mob-hero-icecream@2x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__circle {
+    left: 300px;
+    top: 31px;
+    width: 322px;
+    height: 322px;
+
+    &::after {
+      bottom: -47px;
+      left: 70px;
+
+      width: 143px;
+      height: 336px;
+    }
   }
 }
 
@@ -212,7 +364,7 @@ h1 {
   font-weight: 700;
   line-height: 1.3;
 
-  width: 209px;
+  width: 186px;
   display: block;
   height: 44px;
   background-color: $light-text-color;
@@ -226,6 +378,29 @@ h1 {
   &:hover,
   &:focus {
     background-color: $button-hover-background;
+  }
+
+  &--tablet {
+    width: 160px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buy-now-btn--tablet {
+    display: none;
+  }
+
+  .hero__milk-btn {
+    display: none;
+  }
+
+  .hero__right-decor {
+    display: none;
+  }
+
+  .hero__milk-dscr {
+    display: none;
   }
 }
 
