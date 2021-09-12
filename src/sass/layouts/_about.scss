@@ -4,8 +4,8 @@
   @media screen and (max-width: 767px) {
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 775px;
-    background-size: 320px;
+    background-position: right 50% top 750px;
+    background-size: 100vw;
     background-image: url(/images/about__bgi--mob.png);
   }
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -14,11 +14,29 @@
     background-image: url(/images/about__bgi--mob@2x.png);
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 775px;
-    background-size: 320px;
+    background-position: right 50% top 750px;
+    background-size: 100vw;
   }
+
   @media screen and (min-width: 768px) {
     padding: 130px 0 65px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 125px 0 40px;
+    background-repeat: no-repeat;
+    background-position: right 50% top 342px;
+    background-size: 100vw;
+    background-image: url(/images/about__bgi--desk.png);
+  }
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+    (min-resolution: 192dpi) and (min-width: 1280px),
+    (min-resolution: 2dppx) and (min-width: 1280px) {
+    background-image: url(/images/about__bgi--desk@2x.png);
+    padding: 125px 0 40px;
+    background-repeat: no-repeat;
+    background-position: right 50% top 342px;
+    background-size: 100vw;
   }
 }
 
@@ -39,7 +57,7 @@
     font-size: 26px;
     line-height: 1.15;
   }
-  @media screen and(min-width:1200px) {
+  @media screen and(min-width:1280px) {
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
@@ -70,7 +88,7 @@
     letter-spacing: 0.04em;
     margin-bottom: 50px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 58px;
     line-height: 1.13;
     letter-spacing: 0.06em;
@@ -90,6 +108,9 @@
   }
   @media screen and (min-width: 768px) {
     margin-right: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 75px;
   }
 }
 
