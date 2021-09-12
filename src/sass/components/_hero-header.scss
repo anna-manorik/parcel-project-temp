@@ -298,13 +298,23 @@ h1 {
     width: 124px;
     height: 126px;
     background-size: contain;
-    background-image: url(./../images/desk-milk-hero.png);
+    background-image: url(/images/tab-milk-hero.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/tab-milk-hero@2x.png);
+    }
 
     @media screen and (min-width: 1280px) {
       width: 188px;
       height: 191px;
 
       top: 260px;
+
+      background-image: url(/images/desk-milk-hero.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-milk-hero@2x.png);
+      }
     }
   }
 }
@@ -324,15 +334,26 @@ h1 {
     position: absolute;
     right: 0px;
     top: 173px;
-    background-image: url(./../images/desk-baby-hero.png);
     width: 168px;
     height: 133px;
     background-size: contain;
+
+    background-image: url(/images/tab-baby-hero.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/tab-baby-hero@2x.png);
+    }
 
     @media screen and (min-width: 1280px) {
       width: 293px;
       height: 232px;
       top: 280px;
+
+      background-image: url(/images/desk-baby-hero.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-baby-hero@2x.png);
+      }
     }
   }
 }
@@ -410,7 +431,11 @@ h1 {
     width: 171px;
     height: 410px;
     background-size: contain;
-    background-image: url(./../images/mob-hero-icecream@2x.png);
+    background-image: url(/images/mob-hero-icecream.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/mob-hero-icecream@2x.png);
+    }
   }
 }
 
@@ -427,6 +452,12 @@ h1 {
 
       width: 143px;
       height: 336px;
+
+      background-image: url(/images/tab-hero-icecream.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/tab-hero-icecream@2x.png);
+      }
     }
   }
 }
@@ -444,6 +475,12 @@ h1 {
 
       width: 236px;
       height: 557px;
+
+      background-image: url(/images/desk-hero-icecream.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-hero-icecream@2x.png);
+      }
     }
   }
 }
