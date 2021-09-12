@@ -1,22 +1,26 @@
 /*параметри контейнера*/
-.customer-reviews.container {
+.customer-reviews {
   background: $light-text-color;
   padding-bottom: 86px;
 
-  /*мобільний*/
-  @media screen and (min-width: $mobile) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   /*планшет*/
   @media screen and (min-width: $tablet) {
     padding-bottom: 119px;
+  }
+  /*десктоп*/
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 132px;
+  }
+}
+
+.container.customer-reviews__container {
+  /*планшет*/
+  @media screen and (min-width: $tablet) {
     padding-left: 74px;
     padding-right: 74px;
   }
   /*десктоп*/
   @media screen and (min-width: $desktop) {
-    padding-bottom: 132px;
     padding-left: 177px;
     padding-right: 177px;
   }
@@ -132,43 +136,27 @@
   margin-bottom: 34px;
   background-color: $feedback-background-color;
   box-sizing: border-box;
+  background-image: url(../images/quotes.png);
+  background-size: 54px 40px;
+  background-repeat: no-repeat;
+  background-position: 61px 28px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/quotes@2x.png);
+    background-size: 54px 40px;
+  }
 
   @media screen and (min-width: $tablet) {
     padding: 47px 36px 28px 60px;
     margin-top: 19px;
     margin-bottom: 42px;
+    background-position: 40px 30px;
   }
   @media screen and (min-width: $desktop) {
     padding: 47px 54px 32px 59px;
     margin-top: 19px;
     margin-bottom: 42px;
     background-position: 50px 32px;
-  }
-}
-
-.review__text::before {
-  position: absolute;
-  left: 61px;
-  top: 28px;
-  content: '';
-  display: block;
-  width: 54px;
-  height: 40px;
-  background-image: url(../images/quotes.png);
-  background-size: cover;
-  z-index: 1;
-
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/quotes@2x.png);
-  }
-
-  @media screen and (min-width: $tablet) {
-    left: 40px;
-    top: 30px;
-  }
-  @media screen and (min-width: $desktop) {
-    left: 50px;
-    top: 32px;
   }
 }
 
@@ -184,8 +172,8 @@
     to top,
     $feedback-quotes-color,
     $feedback-quotes-color 1px,
-    $feedback-background-color 1px,
-    $feedback-background-color 30px
+    transparent 1px,
+    transparent 30px
   );
 
   @media screen and (min-width: $tablet) {
