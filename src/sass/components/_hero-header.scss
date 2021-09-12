@@ -41,6 +41,8 @@ h1 {
     font-family: $main-font-family;
     color: $light-text-color;
 
+    transition: color 250ms ease-in-out;
+
     &:hover,
     &:focus {
       color: $main-title-color;
@@ -49,13 +51,21 @@ h1 {
 }
 
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 26px;
   text-decoration: none;
   margin-right: auto;
   text-transform: uppercase;
   color: $main-title-color;
   font-family: $title-font-family;
+
+  transition: color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $slide-dot-dark-color;
+  }
 
   padding-top: 6px;
 
@@ -69,17 +79,26 @@ h1 {
 }
 
 .logo-icon {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+
+  margin-right: 20px;
   background-color: $main-title-color;
+
+  transition: background-color 250ms ease-in-out;
+
+  .logo:hover &,
+  .logo:focus & {
+    background-color: $slide-dot-dark-color;
+  }
 }
 
-.menu-btn__icon {
-  display: block;
-  fill: $dark-text-color;
-  transition: fill 250ms ease-in-out;
+.logo-icon-svg {
+  fill: $light-text-color;
 }
 
 .header__menu-btn {
@@ -88,6 +107,26 @@ h1 {
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.menu-btn__icon {
+  display: block;
+  stroke: $main-title-color;
+  transition: stroke 250ms ease-in-out;
+
+  .header__menu-btn:focus &,
+  .header__menu-btn:hover & {
+    stroke: $light-text-color;
+  }
+}
+
+.menu-close-btn__icon {
+  stroke: $light-text-color;
+
+  .header__menu-btn:hover &,
+  .header__menu-btn:focus {
+    stroke: $main-title-color;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -207,6 +246,8 @@ h1 {
     font-size: 8px;
     border-radius: 20px;
 
+    transition: background-color 250ms ease-in-out;
+
     @media screen and (min-width: 1280px) {
       min-width: 105px;
       min-height: 40px;
@@ -232,6 +273,8 @@ h1 {
     background-color: $light-text-color;
     font-size: 8px;
     border-radius: 20px;
+
+    transition: background-color 250ms ease-in-out;
 
     @media screen and (min-width: 1280px) {
       min-width: 138px;
@@ -272,23 +315,6 @@ h1 {
     margin-bottom: 10px;
     margin-left: 200px;
   }
-}
-
-.hero__milk-btn {
-  background-color: #f3f3f3;
-
-  border-style: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-
-  margin: 7px 0 0 120px;
-
-  @media screen and (min-width: 1280px) {
-    width: 26px;
-    height: 26px;
-    margin-left: 200px;
-  }
 
   &::after {
     content: ' ';
@@ -307,7 +333,7 @@ h1 {
     @media screen and (min-width: 1280px) {
       width: 188px;
       height: 191px;
-
+      left: -40px;
       top: 260px;
 
       background-image: url(/images/desk-milk-hero.png);
@@ -319,23 +345,55 @@ h1 {
   }
 }
 
+.btn-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+.hero__milk-btn {
+  background-color: #f3f3f3;
+
+  border-style: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  margin: 7px 0 0 120px;
+
+  transition: background-color 250ms ease-in-out;
+
+  &:focus,
+  &:hover {
+    background-color: $mobile-menu-background;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+    margin-left: 200px;
+  }
+}
+
 .hero__right-decor {
   position: absolute;
   right: 44px;
   top: 94px;
 
   @media screen and (min-width: 1280px) {
-    right: 110px;
+    right: 10px;
     top: 156px;
   }
 
   &::before {
     content: ' ';
     position: absolute;
-    right: 0px;
+
     top: 173px;
+    right: 0;
+
     width: 168px;
     height: 133px;
+
     background-size: contain;
 
     background-image: url(/images/tab-baby-hero.png);
@@ -348,6 +406,7 @@ h1 {
       width: 293px;
       height: 232px;
       top: 280px;
+      right: 100px;
 
       background-image: url(/images/desk-baby-hero.png);
 
@@ -517,13 +576,16 @@ h1 {
 .menu-close-btn {
   align-self: flex-end;
   display: flex;
-  // width: 14px;
-  // height: 14px;
   background-color: transparent;
   border: none;
   margin: 0;
   padding: 0;
   margin-bottom: 23px;
+}
+
+.btn-tablet {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .buy-now-btn {
@@ -544,6 +606,8 @@ h1 {
 
   padding: 0;
   margin-bottom: 20px;
+
+  transition: background-color 250ms ease-in-out;
 
   &:hover,
   &:focus {
