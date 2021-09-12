@@ -27,6 +27,11 @@
     padding-top: 122px;
     padding-bottom: 112px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
 }
 
 .products-section__list {
@@ -47,6 +52,11 @@
     width: 220px;
     height: 485px;
   }
+
+  @media screen and (min-width: 1280px) {
+    width: 329px;
+    height: 525px;
+  }
 }
 
 .products-section__item--first {
@@ -58,6 +68,12 @@
   @media screen and (min-width: 768px) {
     margin-right: 20px;
     padding: 152px 0 40px 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 30px;
+    padding: 163px 0 50px 0;
     margin-bottom: 0;
   }
 }
@@ -73,6 +89,12 @@
     margin-bottom: 0;
     padding: 152px 0 40px 0;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 30px;
+    padding: 163px 0 50px 0;
+    margin-bottom: 0;
+  }
 }
 
 .products-section__item--third {
@@ -82,6 +104,10 @@
 
   @media screen and (min-width: 768px) {
     padding: 152px 0 40px 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 163px 0 50px 0;
   }
 }
 
@@ -100,6 +126,11 @@
   @media screen and (min-width: 768px) {
     font-size: 26px;
     line-height: 1.15;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
   }
 }
 
@@ -120,6 +151,12 @@
     line-height: 1.16;
     margin-bottom: 150px;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.14;
+    margin-bottom: 259px;
+  }
 }
 
 .products-section__subtitle {
@@ -133,6 +170,12 @@
   text-transform: uppercase;
   color: $light-text-color;
   margin-bottom: 66px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 70px;
+  }
 
   &::after {
     content: '';
@@ -149,6 +192,12 @@
     @media screen and (min-width: 768px) {
       top: 205px;
       left: 97px;
+      background-size: contain;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: 229px;
+      left: 151px;
       background-size: contain;
     }
   }
@@ -194,6 +243,21 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .products-section__subtitle--first::before {
+    width: 335px;
+    height: 335px;
+    bottom: 400px;
+    background-image: url('../images/desk-productcard1.png');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products-section__subtitle--first::before {
+      background-image: url('../images/desk-productcard1@2x.png');
+    }
+  }
+}
+
 .products-section__subtitle--second {
   &::before {
     content: '';
@@ -223,6 +287,11 @@
       left: 97px;
       background-size: contain;
     }
+
+    @media screen and (min-width: 1280px) {
+      top: 229px;
+      left: 152px;
+    }
   }
 }
 
@@ -249,6 +318,21 @@
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .products-section__subtitle--second::before {
       background-image: url('../images/tab-productcard2@2x.png');
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .products-section__subtitle--second::before {
+    width: 335px;
+    height: 335px;
+    bottom: 400px;
+    background-image: url('../images/desk-productcard2.png');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products-section__subtitle--second::before {
+      background-image: url('../images/desk-productcard2@2x.png');
     }
   }
 }
@@ -287,6 +371,21 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .products-section__subtitle--third::before {
+    width: 335px;
+    height: 335px;
+    bottom: 400px;
+    background-image: url('../images/desk-productcard3.png');
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .products-section__subtitle--third::before {
+      background-image: url('../images/desk-productcard3@2x.png');
+    }
+  }
+}
+
 .products-section__description {
   font-family: DM Sans;
   font-style: normal;
@@ -305,6 +404,14 @@
     padding-left: auto;
     padding-right: auto;
     margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.75;
+    padding-left: 44px;
+    padding-right: 44px;
+    margin-bottom: 52px;
   }
 }
 
