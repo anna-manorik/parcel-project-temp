@@ -70,7 +70,6 @@
 .about__body {
   @media screen and(min-width:768px) {
     display: flex;
-    align-items: center;
   }
 }
 
@@ -99,7 +98,6 @@
   font-weight: 500;
 
   @media screen and (max-width: 767px) {
-    // width: 220px;
     font-size: 12px;
     line-height: 1.62;
     margin-bottom: 30px;
@@ -107,6 +105,7 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.76;
+    margin-top: 50px;
     margin-bottom: 30px;
   }
 }
