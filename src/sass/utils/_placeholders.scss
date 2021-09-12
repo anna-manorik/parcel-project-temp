@@ -14,9 +14,10 @@
 
 %contacts-section__buttons {
   display: flex;
-  border: none;
   justify-content: center;
   align-items: center;
+
+  border: none;
 
   @media screen and (max-width: $tablet - 1px) {
     margin-left: auto;

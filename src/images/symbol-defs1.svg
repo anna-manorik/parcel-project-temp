@@ -28,5 +28,11 @@
     <symbol id="icon-facebook" viewBox="0 0 16 32">
       <path fill="#fff" style="fill:var(--color1, #fff)" d="M14.266 15.97H10.09v15.39H3.762V15.968H.754V10.56h3.008V7.062C3.762 4.558 4.946.64 10.146.64l4.688.019v5.25h-3.402c-.557 0-1.342.282-1.342 1.475v3.184h4.73l-.554 5.4z" />
     </symbol>
+    <symbol id="icon-Vector-2" viewBox="0 0 26 32">
+<path fill="none" stroke="#d41443" style="stroke: var(--color1, #d41443)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4" d="M5.172 3.2l14.169 12.8-14.169 12.8"></path>
+</symbol>
+<symbol id="icon-Vector-1" viewBox="0 0 26 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4" d="M5.172 3.2l14.169 12.8-14.169 12.8"></path>
+</symbol>
   </defs>
 </svg>

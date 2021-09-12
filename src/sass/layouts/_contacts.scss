@@ -42,15 +42,14 @@
 }
 
 .contacts-section__container {
-    padding-left: 50px;
-    padding-right: 50px;
-    @media screen and (min-width: $tablet) {
+    @media screen and (max-width: $tablet - 1px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
         padding-left: 36px;
         padding-right: 36px;
-    }
-    @media screen and (min-width: $desktop) {
-        padding-left: 115px;
-        padding-right: 115px;
     }
 }
 
@@ -248,4 +247,8 @@
     &:hover, &:focus {
         background-color: $button-hover-background;
     }
+}
+
+.contacts-section__icon {
+    margin-left: 14px;
 }
