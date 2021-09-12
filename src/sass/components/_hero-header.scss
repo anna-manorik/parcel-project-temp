@@ -8,44 +8,97 @@ h1 {
   position: absolute;
 }
 
-.container {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  // outline: 1px solid tomato;
+@media screen and (min-width: 768px) {
+  .header {
+    top: 40px;
+  }
 }
 
-.navigator {
+.navigation {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+
+    margin-right: auto;
+
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__links {
+    padding: 10px 0;
+
+    font-size: 16px;
+    font-family: $main-font-family;
+    color: $light-text-color;
+
+    transition: color 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $main-title-color;
+    }
+  }
 }
 
 .logo {
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 26px;
   text-decoration: none;
   margin-right: auto;
+  text-transform: uppercase;
   color: $main-title-color;
   font-family: $title-font-family;
 
+  transition: color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $slide-dot-dark-color;
+  }
+
   padding-top: 6px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: auto;
+  }
 }
 
 .logo-icon {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
+
+  margin-right: 20px;
   background-color: $main-title-color;
+
+  transition: background-color 250ms ease-in-out;
+
+  .logo:hover &,
+  .logo:focus & {
+    background-color: $slide-dot-dark-color;
+  }
 }
 
-.menu-btn__icon {
-  display: block;
-  fill: $dark-text-color;
-  transition: fill 250ms ease-in-out;
+.logo-icon-svg {
+  fill: $light-text-color;
 }
 
 .header__menu-btn {
@@ -56,7 +109,66 @@ h1 {
   padding: 0;
 }
 
+.menu-btn__icon {
+  display: block;
+  stroke: $main-title-color;
+  transition: stroke 250ms ease-in-out;
+
+  .header__menu-btn:focus &,
+  .header__menu-btn:hover & {
+    stroke: $light-text-color;
+  }
+}
+
+.menu-close-btn__icon {
+  stroke: $light-text-color;
+
+  .header__menu-btn:hover &,
+  .header__menu-btn:focus {
+    stroke: $main-title-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu-btn {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header__menu-btn {
+    display: none;
+  }
+}
+
 // Hero
+.hero-container {
+  position: relative;
+  display: flex;
+  max-width: 480px;
+  height: inherit;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.hero__text {
+  position: absolute;
+  margin-top: 180px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 102px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 178px;
+  }
+}
 
 .hero__title {
   max-width: 218px;
@@ -67,7 +179,7 @@ h1 {
   line-height: 1.14;
   font-weight: 400;
   color: $light-text-color;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   font-family: $title-font-family;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -78,18 +190,45 @@ h1 {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 22px;
+    max-width: 162px;
+
+    margin-bottom: 25px;
+
+    &--accent {
+      font-size: 34px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 38px;
+    max-width: 277px;
+
+    &--accent {
+      font-size: 58px;
+    }
+  }
+}
+
 .hero__links {
   display: flex;
   position: relative;
-
+  margin-bottom: 66px;
   font-family: $main-font-family;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 110px;
+  }
 }
 
 .hero {
   background-color: $hero-background-color;
 
-  padding-top: 160px;
-  padding-bottom: 160px;
+  height: 500px;
   overflow: hidden;
 
   &__link--products {
@@ -106,6 +245,14 @@ h1 {
     background-color: $main-title-color;
     font-size: 8px;
     border-radius: 20px;
+
+    transition: background-color 250ms ease-in-out;
+
+    @media screen and (min-width: 1280px) {
+      min-width: 105px;
+      min-height: 40px;
+      font-size: 14px;
+    }
 
     &:hover,
     &:focus {
@@ -127,6 +274,14 @@ h1 {
     font-size: 8px;
     border-radius: 20px;
 
+    transition: background-color 250ms ease-in-out;
+
+    @media screen and (min-width: 1280px) {
+      min-width: 138px;
+      min-height: 40px;
+      font-size: 14px;
+    }
+
     &:hover,
     &:focus {
       background-color: $button-hover-background;
@@ -134,9 +289,186 @@ h1 {
   }
 }
 
-// Hero section
-.hero-container {
-  position: relative;
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 665px;
+  }
+}
+
+.hero__milk-dscr {
+  width: 120px;
+  font-family: $main-font-family;
+  color: $light-text-color;
+  font-size: 8px;
+  line-height: 1.4;
+
+  margin: 0 0 0 120px;
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 124px;
+    height: 126px;
+    background-size: contain;
+    background-image: url(/images/tab-milk-hero.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/tab-milk-hero@2x.png);
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 188px;
+      height: 191px;
+      left: -40px;
+      top: 260px;
+
+      background-image: url(/images/desk-milk-hero.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-milk-hero@2x.png);
+      }
+    }
+  }
+}
+
+.btn-arrow {
+  width: 10px;
+  height: 10px;
+}
+
+.hero__milk-btn {
+  background-color: #f3f3f3;
+
+  border-style: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  margin: 7px 0 0 120px;
+
+  transition: background-color 250ms ease-in-out;
+
+  &:focus,
+  &:hover {
+    background-color: $mobile-menu-background;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 26px;
+    height: 26px;
+    margin-left: 200px;
+  }
+}
+
+.hero__right-decor {
+  position: absolute;
+  right: 44px;
+  top: 94px;
+
+  @media screen and (min-width: 1280px) {
+    right: 10px;
+    top: 156px;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+
+    top: 173px;
+    right: 0;
+
+    width: 168px;
+    height: 133px;
+
+    background-size: contain;
+
+    background-image: url(/images/tab-baby-hero.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/tab-baby-hero@2x.png);
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 293px;
+      height: 232px;
+      top: 280px;
+      right: 100px;
+
+      background-image: url(/images/desk-baby-hero.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-baby-hero@2x.png);
+      }
+    }
+  }
+}
+
+.right-decor__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  max-width: 51px;
+
+  font-family: $main-font-family;
+  font-size: 8px;
+  line-height: 1;
+  color: $light-text-color;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.3;
+    max-width: 90px;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    right: -8px;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $light-text-color;
+
+    @media screen and (min-width: 1280px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &--accent {
+    position: relative;
+    z-index: 10;
+
+    font-family: $title-font-family;
+    color: $main-title-color;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.4;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 46px;
+    }
+  }
+
+  &:last-child {
+    margin-top: 15px;
+  }
 }
 
 // Decorative
@@ -146,7 +478,7 @@ h1 {
   height: 346px;
   border-radius: 50%;
   position: absolute;
-  top: -103px;
+  top: 79px;
   left: 36px;
   background-color: $title-label-color;
 
@@ -158,7 +490,57 @@ h1 {
     width: 171px;
     height: 410px;
     background-size: contain;
-    background-image: url(./../images/mob-hero-icecream@2x.png);
+    background-image: url(/images/mob-hero-icecream.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(/images/mob-hero-icecream@2x.png);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__circle {
+    left: 300px;
+    top: 31px;
+    width: 322px;
+    height: 322px;
+
+    &::after {
+      bottom: -47px;
+      left: 70px;
+
+      width: 143px;
+      height: 336px;
+
+      background-image: url(/images/tab-hero-icecream.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/tab-hero-icecream@2x.png);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__circle {
+    left: 475px;
+    top: 52px;
+    width: 538px;
+    height: 538px;
+
+    &::after {
+      bottom: -75px;
+      left: 117px;
+
+      width: 236px;
+      height: 557px;
+
+      background-image: url(/images/desk-hero-icecream.png);
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(/images/desk-hero-icecream@2x.png);
+      }
+    }
   }
 }
 
@@ -194,13 +576,16 @@ h1 {
 .menu-close-btn {
   align-self: flex-end;
   display: flex;
-  // width: 14px;
-  // height: 14px;
   background-color: transparent;
   border: none;
   margin: 0;
   padding: 0;
   margin-bottom: 23px;
+}
+
+.btn-tablet {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .buy-now-btn {
@@ -211,7 +596,7 @@ h1 {
   font-weight: 700;
   line-height: 1.3;
 
-  width: 209px;
+  width: 186px;
   display: block;
   height: 44px;
   background-color: $light-text-color;
@@ -222,9 +607,34 @@ h1 {
   padding: 0;
   margin-bottom: 20px;
 
+  transition: background-color 250ms ease-in-out;
+
   &:hover,
   &:focus {
     background-color: $button-hover-background;
+  }
+
+  &--tablet {
+    width: 160px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buy-now-btn--tablet {
+    display: none;
+  }
+
+  .hero__milk-btn {
+    display: none;
+  }
+
+  .hero__right-decor {
+    display: none;
+  }
+
+  .hero__milk-dscr {
+    display: none;
   }
 }
 

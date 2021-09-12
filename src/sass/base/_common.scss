@@ -1,5 +1,5 @@
 body {
-  background-color: $section-light-background;
+  background-color: $light-text-color;
   color: $dark-text-color;
   font-family: $main-font-family;
   font-weight: 500;
@@ -61,5 +61,7 @@ img {
   }
   @media screen and (min-width: 1280px) {
     width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }

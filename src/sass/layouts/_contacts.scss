@@ -11,13 +11,43 @@
                 to bottom, 
                 $light-text-color 10%, 
                 $section-dark-background 10%);
-    } 
+        padding-bottom: 158px;        
+    }
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 165px;
+        background-image:
+            url(./../images/Contacts-section/desktop-contacts.png), 
+
+            linear-gradient(
+                to bottom, 
+                $light-text-color 10%, 
+                $section-dark-background 10%);
+        background-repeat: no-repeat;
+        background-position-y: 20%;
+        background-size: contain;
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:
+                url(./../images/Contacts-section/desktop-contacts@2x.png), 
+                linear-gradient(
+                    to bottom, 
+                    $light-text-color 10%, 
+                    $section-dark-background 10%);
+            background-repeat: no-repeat;
+            background-position-y: 20%;
+            background-size: contain;  
+        }
+    }
 }
 
 .contacts-section__container {
-    padding-left: 50px;
-    padding-right: 50px;
-    @media screen and (min-width: $tablet) {
+    @media screen and (max-width: $tablet - 1px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
         padding-left: 36px;
         padding-right: 36px;
     }
@@ -33,6 +63,10 @@
 
         margin-bottom: 81px;
         margin-left: -20px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 86px;
+        margin-left: -30px;
     }
 }
 
@@ -60,6 +94,11 @@
         margin-left: 20px;
         padding: 50px 32px;
     }
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 60px) / 3);
+        margin-left: 30px;
+        padding: 56px 44px;
+    }
 }
 
 .contacts-section__category {
@@ -77,6 +116,9 @@
         font-size: 16px;
         line-height: 1.86;
     }
+    @media screen and (min-width: $desktop) {
+        line-height: 1.88;
+    }
 }
 
 .contacts-section__category-secondary {
@@ -91,11 +133,18 @@
         padding-top: 30px;
         padding-bottom: 30px;  
     }
+    @media screen and (min-width: $desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }
 .contacts-section__box:last-child {
     padding-top: 25px;
     @media screen and (min-width: $tablet) {
        padding-top: 30px; 
+    }
+    @media screen and (min-width: $desktop) {
+       padding-top: 32px; 
     }
 }
 
@@ -107,6 +156,10 @@
         font-size: 14px;
         line-height: 1.86;
     }
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.88;
+    }
 }
 
 .contacts-section__representation-text {
@@ -114,6 +167,10 @@
     @media screen and (min-width: $tablet) {
         font-size: 14px;
         line-height: 1.64;
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.81;
     }
 }
 
@@ -123,6 +180,10 @@
     @media screen and (min-width: $tablet) {
         font-size: 14px;
         line-height: 1.86;
+    }
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.88;
     }
 }
 
@@ -135,6 +196,10 @@
         font-size: 14px;
         line-height: 1.86;
     }
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.88;
+    }
 }
 
 .contacts-section__work-time:not(:last-child) {
@@ -146,6 +211,11 @@
     display: block;
 
     color: $middle-text-color;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.81;
+    }
 }
 
 .contacts-section__buttons-box {
@@ -177,4 +247,8 @@
     &:hover, &:focus {
         background-color: $button-hover-background;
     }
+}
+
+.contacts-section__icon {
+    margin-left: 14px;
 }

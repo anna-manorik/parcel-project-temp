@@ -14,9 +14,10 @@
 
 %contacts-section__buttons {
   display: flex;
-  border: none;
   justify-content: center;
   align-items: center;
+
+  border: none;
 
   @media screen and (max-width: $tablet - 1px) {
     margin-left: auto;
@@ -27,6 +28,9 @@
   border-radius: 22px;
   @media screen and (min-width: $tablet) {
     min-width: 191px;
+  }
+  @media screen and (min-width: $tablet) {
+    min-width: 198px;
   }
  
   font-weight: 700;
