@@ -1,16 +1,16 @@
 footer {
-    padding-top: 56px;
+   //padding-top: 56px;
     padding-bottom: 25px;
     background: #fff5f6;
   
     @media screen and (min-width: 768px) {
-      padding-top: 79px;
+    //  padding-top: 79px;
       padding-bottom: 18px;
       
     }
   
-    @media screen and (min-width: 1200px) {
-      padding-top: 83px;
+    @media screen and (min-width: 1280px) {
+    //  padding-top: 83px;
       padding-bottom: 10px;
     }
   }
@@ -29,14 +29,14 @@ footer {
       width: 340px;
     }
   
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       width: 480px;
     }
   }
   
   .footer-title {
     margin-top: 0;
-    margin-bottom: 17px;
+   // margin-bottom: 17px;
     color: #ffa5ba;
     font-family:  $title-font-family;
     text-transform: uppercase;
@@ -49,7 +49,7 @@ footer {
      
     }
   
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-top: 0;
       margin-bottom: 15px;
       font-size: 26px;
@@ -69,7 +69,7 @@ footer {
       font-size: 48px;
     }
   
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-bottom: 97px;
     }
   }
@@ -79,7 +79,7 @@ footer {
     justify-content: flex-end;
     margin-bottom: 46px;
   
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-bottom: 50px;
     }
   }
@@ -87,9 +87,9 @@ footer {
   .footer-item:not(:last-child) {
     margin-right: 28px;
   
-    @media screen and (min-width: 768px) {
-      margin-right: 30px;
-    }
+   //@media screen and (min-width: 768px) {
+   //margin-right: 30px;
+   //}
   
     @media screen and (min-width: 768px) {
       margin-right: 24px;
@@ -110,7 +110,7 @@ footer {
   
     &:hover,
     &:focus {
-      background-color: $hero-background-color;
+      background-color: #d41443;
     }
   
     @media screen and (min-width: 768px) {
@@ -120,8 +120,8 @@ footer {
   }
   
   .footer-github {
-    width: 18.82px;
-    height: 18.82px;
+    width: 19px;
+    height: 19px;
   
     @media screen and (min-width: 768px) {
       width: 20px;
@@ -130,22 +130,22 @@ footer {
   }
   
   .footer-telegram {
-    width: 19.2px;
-    height: 14.93px;
+    width: 19px;
+    height: 15px;
   
     @media screen and (min-width: 768px) {
-      width: 20.4px;
-      height: 15.87px;
+      width: 20px;
+      height: 16px;
     }
   }
   
   .footer-facebook {
-    width: 8.8px;
-    height: 19.2px;
+    width: 9px;
+    height: 19px;
   
     @media screen and (min-width: 768px) {
-      width: 9.35px;
-      height: 20.4px;
+      width: 10px;
+      height: 20px;
     }
   }
   
@@ -164,14 +164,14 @@ footer {
       font-size: 14px;
     }
   
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       letter-spacing: 0.02em;
     }
   }
   
   .footer-tel {
-    color:  #d41443;;
+    color:#d41443;
   }
   
   .copyright {
@@ -201,7 +201,6 @@ footer {
       letter-spacing: 0.02em;
     }
   }
-  //h3{
-    //font-size: 34px;
+ 
   
  
