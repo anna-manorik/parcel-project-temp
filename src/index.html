@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IceCream - Made With Passion</title>
+    <title>Заголовок страницы</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link type="image/vnd.microsoft.icon" href="./images/ice-logo.jpg" sizes="16x16" rel="shortcut icon">
+    
   </head>
   <body>
     <include src="./partials/hero-header.html"></include>
@@ -29,21 +29,18 @@
       <include src="./partials/gallery.html"></include>
       <include src="./partials/reviews.html"></include>
       <include src="./partials/contacts.html"></include>
+      <include src="./partials/footer.html"></include>
+      <include src="./partials/modal.html"></include>
     </main>
 
     <!-- Mobile menu -->
     <div class="mobile-menu js-menu-container mob-menu-container" id="mobile-menu">
       <button class="menu-close-btn js-close-menu">
         <svg width="14" height="14">
-          <use class="menu-close-btn__icon" href="/images/symbol-defs1.svg#icon-close"></use>
+          <use class="menu-close-btn__icon" href="/images/svg/symbol-defs.svg#close"></use>
         </svg>
       </button>
-      <button class="buy-now-btn">
-        <span class="btn-tablet">Buy now</span>
-        <svg width="7" height="9">
-          <use class="btn-arrow" href="/images/symbol-defs1.svg#icon-vector"></use>
-        </svg>
-      </button>
+      <button class="buy-now-btn">Buy now ></button>
       <ul class="mobile-nav">
         <li class="mobile-nav__item"><a class="mobile-nav__link" href=""> Home</a></li>
         <li class="mobile-nav__item"><a class="mobile-nav__link" href="">About us</a></li>
@@ -53,10 +50,9 @@
       </ul>
     </div>
 
-    <include src="./partials/footer.html"></include>
-
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
