@@ -1,0 +1,66 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal__button" data-modal-close>
+            <svg class="modal__close" width="20px" height="20px">
+                <use href="/images/symbol-defs1.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <form class="form">
+            <h2 class="form__title">Basket</h2>
+
+            <div class="form__field">
+                <label for="name" class="form__text">Name</label>
+                <input type="text" name="user-name" id="name" class="form__input"  placeholder=" " required >
+            </div>
+
+            <div class="form__field">
+                <label for="tel" class="form__text">Phone number</label>
+                <input type="text" name="tel" id="tel" class="form__input" placeholder=" " required  >
+            </div>
+                
+            <div class="form__field">
+                <label for="email" class="form__text">E-mail</label>
+                <input type="text" name="email" id="email" class="form__input"  placeholder=" " required>
+            </div>
+
+            <div role="group" class="checkbox__group">
+                <div class="checkbox__item">
+                <input type="checkbox" name="products" value="ice-cream" id="ice-cream">
+                <label for="ice-cream" class="form__text">ice cream</label>
+                <label>
+                    <input type="number" name=" " value="0" min="0" max="10" />
+                  </label>
+                </div>
+
+                  <div class="checkbox__item">
+                <input type="checkbox" name="products" value="ice=coffee" id="ice-coffee">
+                <label for="ice-coffee" class="form__text">ice coffee</label>
+                <label>
+                    <input type="number" name=" " value="0" min="0" max="10" />
+                  </label>
+                </div>
+
+                  <div class="checkbox__item">
+                <input type="checkbox" name="products" value="milkshakes" id="milkshakes">
+                <label for="milkshakes" class="form__text">milkshakes</label>
+                <label>
+                    <input type="number" name=" " value="0" min="0" max="10" />
+                  </label>
+                </div>
+            </div>
+            
+            <div class="form__field">
+                <label for="comment" class="form__text">Comment</label>
+                <textarea name="comment" id="comment" placeholder="Enter text" class="form__comment"></textarea>
+            </div>
+
+            <button type="submit" class="modal__button-buy">Buy
+                <svg width="8px" height="16px">
+                    <use href="/images/symbol-defs1.svg#icon-vector"></use>
+                </svg>
+            </button>
+
+        </form>
+    </div>
+</div>

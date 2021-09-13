@@ -30,6 +30,7 @@
       <include src="./partials/reviews.html"></include>
       <include src="./partials/contacts.html"></include>
       <include src="./partials/footer.html"></include>
+      <include src="./partials/modal.html"></include>
     </main>
 
     <!-- Mobile menu -->
@@ -39,7 +40,7 @@
           <use class="menu-close-btn__icon" href="/images/svg/symbol-defs.svg#close"></use>
         </svg>
       </button>
-      <button class="buy-now-btn">Buy now ></button>
+      <button class="buy-now-btn" data-modal-open>Buy now ></button>
       <ul class="mobile-nav">
         <li class="mobile-nav__item"><a class="mobile-nav__link" href=""> Home</a></li>
         <li class="mobile-nav__item"><a class="mobile-nav__link" href="">About us</a></li>
@@ -51,6 +52,7 @@
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="./js/modal.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
