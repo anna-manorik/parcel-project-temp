@@ -380,7 +380,7 @@ h1 {
   top: 94px;
 
   @media screen and (min-width: 1280px) {
-    right: 10px;
+    right: 110px;
     top: 156px;
   }
 
@@ -406,7 +406,7 @@ h1 {
       width: 293px;
       height: 232px;
       top: 280px;
-      right: 100px;
+      right: 10px;
 
       background-image: url(/images/desk-baby-hero.png);
 
@@ -479,7 +479,7 @@ h1 {
   border-radius: 50%;
   position: absolute;
   top: 79px;
-  left: 36px;
+  left: 15%;
   background-color: $title-label-color;
 
   &::after {
