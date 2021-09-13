@@ -43,6 +43,14 @@
 .advantages__item {
   width: 230px;
   height: 156px;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+
+  &:hover {
+    transform: scale(1.1, 1.25);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -119,19 +127,19 @@
   content: '';
   width: 33px;
   height: 50px;
-  background-image: url(../images/icon-cup.png);
+  background-image: url(../images/milk-bottle.svg);
 }
 
 .advantages__number--second::before {
   width: 50px;
   height: 50px;
-  background-image: url(../images/icon-apples.png);
+  background-image: url(../images/apple-juice.svg);
 }
 
 .advantages__number--third::before {
-  width: 44px;
+  width: 35px;
   height: 50px;
-  background-image: url(../images/icon-heart.png);
+  background-image: url(../images/ice-cream.svg);
 }
 
 .advantages__text {
