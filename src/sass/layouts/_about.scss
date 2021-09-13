@@ -186,70 +186,119 @@
   }
 }
 
-// .about__text--hidden {
-//   @media screen and(max-width:767px) {
-//     margin-top: 10px;
-//   }
-//   @media screen and(min-width:768px) {
-//     margin-top: 15px;
-//   }
-//   @media screen and(min-width:1280px) {
-//     margin-top: 20px;
-//   }
-// }
+.about__button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $main-title-color;
+  background: $light-text-color;
 
-// .about__button {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background: #ffffff;
-//   border-radius: 22px;
-//   text-align: center;
-//   cursor: pointer;
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.28;
-//   width: 176px;
-//   height: 44px;
-//   color: $main-title-color;
-//   transition: background-color $transition-duration $transition-timing-function;
+  border-radius: 22px;
+  width: 176px;
+  height: 44px;
+  cursor: pointer;
+  transition: background $transition-duration $transition-timing-function;
 
-//   &:hover,
-//   &:focus {
-//     background-color: $button-hover-background;
-//   }
-//   @media screen and(max-width:767px) {
-//     margin-top: 35px;
-//   }
-//   @media screen and(min-width:768px) {
-//     margin-top: 60px;
-//   }
-//   @media screen and(min-width:1280px) {
-//     margin-top: 45px;
-//   }
-// }
+  &:hover,
+  &:focus {
+    background: $button-hover-background;
+  }
 
-// .about__text.checked {
-//   display: none;
-// }
+  @media screen and(max-width:767px) {
+    margin-top: 17px;
+  }
+  @media screen and(min-width:768px) {
+    margin-top: 62px;
+  }
+  @media screen and(min-width:1280px) {
+    margin-top: 45px;
+  }
+}
+.button--more {
+  margin-left: 10px;
+}
+.about__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(131, 18, 18, 0.2);
+  transition: opacity $transition-duration $transition-timing-function,
+    visibility $transition-duration $transition-timing-function;
 
-// .about--check:checked + .about__text.checked {
-//   display: inline-block;
-// }
+  z-index: 2;
+}
 
-// .about--check:checked ~ .about__label .read-more {
-//   display: none;
-// }
+.about__backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.about__modal {
+  position: absolute;
+  width: 90vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  padding: 0px 15px 20px;
+  transform: translate(-50%, -50%);
+  background: $light-text-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: scroll;
 
-// .about--check:checked ~ .about__label .read-less {
-//   display: flex;
-// }
+  @media screen and (min-width: 768px) {
+    padding: 0 30px 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0 45px 50px;
+  }
+}
+.about__modal-head {
+  position: sticky;
+  height: 60px;
+  top: 0;
+  background-color: $light-text-color;
 
-// .read-less {
-//   display: none;
-// }
+  @media screen and(min-width:768px) {
+    height: 90px;
+  }
+}
 
-// .button--more {
-//   margin-left: 10px;
-// }
+.about__close {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-image: url(/images/about--close.svg);
+  background-size: contain;
+  background-color: $light-text-color;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  cursor: pointer;
+
+  @media screen and(min-width:768px) {
+    top: 30px;
+  }
+}
+
+.about__modal-text {
+  color: $middle-text-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+}
