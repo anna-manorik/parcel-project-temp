@@ -31,6 +31,8 @@
   width: 280px;
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
+  z-index: 999;
 
   @media screen and (min-width: $tablet) {
     width: 620px;
@@ -43,7 +45,7 @@
 .slider__list {
   width: 300%;
   display: flex;
-  transition: transform 0.8s $transition-timing-function;
+  transition: transform 0.6s $transition-timing-function;
 }
 
 .slider__input {
@@ -70,13 +72,15 @@
   width: 12px;
   height: 12px;
   fill: $slide-dot-light-color;
-  transition: transform $transition-duration $transition-timing-function;
+  transition: transform $transition-duration $transition-timing-function,
+    fill 0.6s $transition-timing-function;
 
   &:hover,
   &:focus {
     transform: scale(1.35);
   }
 }
+//===navigation===
 
 .slider__input--one:checked
   ~ .slider__navigation
@@ -110,6 +114,75 @@
   transform: translateX(-66.66%);
 }
 
+//===Controls===
+.slider__controls {
+  width: 100%;
+  position: absolute;
+  bottom: 50%;
+
+  @media screen and (min-width: $tablet) {
+    bottom: 44%;
+  }
+}
+
+.slider__controls-item {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: transform $transition-duration $transition-timing-function,
+    opacity $transition-duration $transition-timing-function;
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+//стилі для лівої кнопки
+.slider__input--one:checked ~ .slider__controls > .slider__controls-item:nth-child(1),
+.slider__input--two:checked ~ .slider__controls > .slider__controls-item:nth-child(1),
+.slider__input--three:checked ~ .slider__controls > .slider__controls-item:nth-child(2) {
+  display: block;
+  float: left;
+  background-image: url(../images/forward.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -5px;
+  height: 40px;
+  width: 40px;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/forward@2x.png);
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 50px;
+    width: 50px;
+    background-position-x: -10px;
+  }
+}
+
+//стилі для правої кнопки
+.slider__input--one:checked ~ .slider__controls > .slider__controls-item:nth-child(2),
+.slider__input--two:checked ~ .slider__controls > .slider__controls-item:nth-child(3),
+.slider__input--three:checked ~ .slider__controls > .slider__controls-item:nth-child(3) {
+  display: block;
+  float: right;
+  background-image: url(../images/backward.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 5px;
+  height: 40px;
+  width: 40px;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/backward@2x.png);
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 50px;
+    width: 50px;
+    background-position-x: 10px;
+  }
+}
+
 /*===Content===*/
 
 .slide {
@@ -129,7 +202,7 @@
 .review::after {
   position: absolute;
   left: 50%;
-  bottom: -15px;
+  bottom: -30px;
   display: block;
   content: '';
   width: 4px;
@@ -139,19 +212,35 @@
   transform: translateX(-50%);
 
   box-shadow: -10px 0 0 0 $slide-dot-dark-color, 10px 0 0 0 $slide-dot-dark-color;
+
+  @media screen and (min-width: $tablet) {
+    bottom: -24px;
+  }
+  @media screen and (min-width: $desktop) {
+    bottom: -15px;
+  }
 }
 
 .slide__image {
   width: 85px;
   height: 85px;
   margin: 0 auto;
+  border-radius: 50%;
+  transition: transform $transition-duration $transition-timing-function,
+    box-shadow $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.001);
+    box-shadow: 0px 0px 2px 0px $middle-text-color;
+  }
 }
 .review {
   width: 100%;
   position: relative;
   padding: 43px 50px 20px 50px;
   margin-top: 29px;
-  margin-bottom: 34px;
+  margin-bottom: 52px;
   background-color: $feedback-background-color;
   box-sizing: border-box;
   background-image: url(../images/quotes.png);
@@ -165,7 +254,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 47px 36px 28px 60px;
+    padding: 47px 56px 28px 60px;
     margin-top: 19px;
     margin-bottom: 42px;
     background-position: 40px 30px;
@@ -173,7 +262,7 @@
   @media screen and (min-width: $desktop) {
     padding: 47px 54px 32px 59px;
     margin-top: 19px;
-    margin-bottom: 42px;
+    margin-bottom: 34px;
     background-position: 50px 32px;
   }
 }
@@ -191,14 +280,14 @@
     $feedback-quotes-color,
     $feedback-quotes-color 1px,
     transparent 1px,
-    transparent 30px
+    transparent 31px
   );
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     line-height: 2.16;
     padding-left: 20px;
-    padding-right: 44px;
+    padding-right: 24px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
