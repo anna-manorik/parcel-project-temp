@@ -1,11 +1,11 @@
 <section class="customer-reviews">
     <div class="container customer-reviews__container">
         <div class="slider">
-            <div class="slider__list">
-                <input type="radio" name="btn" id="btn1" checked class="slider__input slider__input--one">
-                <input type="radio" name="btn" id="btn2" class="slider__input slider__input--two">
-                <input type="radio" name="btn" id="btn3" class="slider__input slider__input--three">
-                <div class="slide slide--checked">
+            <input type="radio" name="btn" id="btn1" checked class="slider__input slider__input--one">
+            <input type="radio" name="btn" id="btn2" class="slider__input slider__input--two">
+            <input type="radio" name="btn" id="btn3" class="slider__input slider__input--three">
+            <ul class="slider__list">
+                <li class="slide slide--checked">
                     <img srcset="./images/customer_one@2x.jpg 2x" src="./images/customer_one.jpg" alt="smiling girl"
                         class="slide__image">
                     <div class="review">
@@ -16,9 +16,8 @@
                         </article>
                     </div>
                     <p class="review__subtitle">Emily, Los Angeles</p>
-
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img srcset="./images/customer_two@2x.jpg 2x" src="./images/customer_two.jpg" alt="smiling girl"
                         class="slide__image">
                     <div class="review">
@@ -30,9 +29,8 @@
                         </article>
                     </div>
                     <p class="review__subtitle">Jenifer, Los Angeles</p>
-
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img srcset="./images/customer_three@2x.jpg 2x" src="./images/customer_three.jpg" alt="smiling girl"
                         class="slide__image">
                     <div class="review">
@@ -43,11 +41,10 @@
                         </article>
                     </div>
                     <p class="review__subtitle">Britney, Los Angeles</p>
-
-                </div>
-            </div>
+                </li>
+            </ul>
             <div class="slider__navigation">
-                <label for="btn1" class="slider__navigation-item"><svg class="slider__navigation-icon slider__navigation-icon--checked">
+                <label for="btn1" class="slider__navigation-item"><svg class="slider__navigation-icon slider__navigation-icon--home">
                         <use href="./images/symbol-defs.svg#icon-home"></use>
                     </svg></label>
                 <label for="btn2" class="slider__navigation-item"><svg class="slider__navigation-icon">
@@ -57,7 +54,11 @@
                         <use href="./images/symbol-defs.svg#icon-ellipse"></use>
                     </svg></label>
             </div>
-
+            <div class="slider__controls">
+                <label for="btn1" class="slider__controls-item"></label>
+                <label for="btn2" class="slider__controls-item"></label>
+                <label for="btn3" class="slider__controls-item"></label>
+            </div>
         </div>
     </div>
 </section>
