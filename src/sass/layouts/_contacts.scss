@@ -109,7 +109,7 @@
 
     color: $light-text-color;
 
-    background-color: $middle-text-color;
+    background-color: $second-product-card-color;
     border-radius: 4px;
 
     @media screen and (min-width: $tablet) {
@@ -163,7 +163,7 @@
 }
 
 .contacts-section__representation-text {
-    color: $second-product-card-color;
+    color: $middle-text-color;
     @media screen and (min-width: $tablet) {
         font-size: 14px;
         line-height: 1.64;
@@ -210,7 +210,7 @@
 .contacts-section__link {
     display: block;
 
-    color: $second-product-card-color;
+    color: $middle-text-color;
 
     @media screen and (min-width: $desktop) {
         font-size: 16px;
