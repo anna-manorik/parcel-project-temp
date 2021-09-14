@@ -1,9 +1,7 @@
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  // box-shadow: 1px 4px 6px rgb(0 0 0 / 16%), 0px 4px 4px rgb(0 0 0 / 6%),
-  //   0px 1px 1px rgb(0 0 0 / 12%);
+  width: 100%;
+  height: 100%;
 }
 
 .gallery {
@@ -77,6 +75,10 @@ img {
   width: 40px;
   height: 40px;
   margin: 2px;
+  border-radius: 14%;
+
+  box-shadow: 1px 4px 6px rgb(0 0 0 / 16%), 0px 4px 4px rgb(0 0 0 / 6%),
+    0px 1px 1px rgb(0 0 0 / 12%);
 
   @media screen and (min-width: 768px) {
     width: 87px;
@@ -97,14 +99,14 @@ img {
 }
 
 .gallery__pic--first {
-  padding-top: 40px;
+  margin-top: 40px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 87px;
+    margin-top: 87px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 142px;
+    margin-top: 142px;
   }
 }
 
@@ -171,13 +173,13 @@ img {
 }
 
 .gallery__pic--last {
-  padding-top: 43px;
+  margin-top: 43px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 95px;
+    margin-top: 95px;
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 153px;
+    margin-top: 153px;
   }
 }
