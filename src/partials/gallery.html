@@ -1,20 +1,101 @@
-<section id="gallery" class="gallery">
+<section class="gallery" id="gallery">
   <div class="container gallery__container">
     <h1 class="gallery__name">gallery</h1>
-    <picture>
+    <picture class="gallery__pic gallery__pic--first">
       <source
-        media="(min-width: 1280px)"
-        srcset="/images/desk-gallery.jpg 1x, /images/desk-gallery@2x.jpg 2x"
+        media="(max-width: 48px)"
+        srcset="./images/gallery1.jpg 1x, ./images/gallery1@2x.jpg 2x"
       />
-      <source
-        media="(min-width: 768px)"
-        srcset="/images/tab-gallery.jpg 1x, /images/tab-gallery@2x.jpg 2x"
-      />
-      <source
-        media="(max-width: 767px)"
-        srcset="/images/mob-gallery.jpg 1x, /images/mob-gallery@2x.jpg 2x"
-      />
-      <img src="/images/mob-gallery.jpg" alt="фотографии людей" />
+
+      <img src="./images/gallery1.jpg" alt="фотографии людей" style="border-radius: 12px" />
     </picture>
+
+    <div class="gallery__box gallery__box--first">
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery2.jpg 1x, ./images/gallery2@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery2.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery3.jpg 1x, ./images/gallery3@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery3.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+    </div>
+
+    <div class="gallery__box gallery__box--second">
+      <picture class="gallery__pic gallery__pic--bigger">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery4.jpg 1x, ./images/gallery4@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery4.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery5.jpg 1x, ./images/gallery5@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery5.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+    </div>
+    <div class="gallery__box gallery__box--third">
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery6.jpg 1x, ./images/gallery6@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery6.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery7.jpg 1x, ./images/gallery7@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery7.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+    </div>
+    <div class="gallery__box gallery__box--fourth">
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery8.jpg 1x, ./images/gallery8@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery8.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+
+      <picture class="gallery__pic">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery9.jpg 1x, ./images/gallery9@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery9.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+    </div>
+    <div class="gallery__box">
+      <picture class="gallery__pic gallery__pic--last">
+        <source
+          media="(max-width: 48px)"
+          srcset="./images/gallery10.jpg 1x, ./images/gallery10@2x.jpg 2x"
+        />
+
+        <img src="./images/gallery10.jpg" alt="фотографии людей" style="border-radius: 12px" />
+      </picture>
+    </div>
   </div>
 </section>
