@@ -64,15 +64,61 @@
       <button type="button" class="contacts-section__button-location">
         Our Locations
         <svg class="contacts-section__icon" width="8" height="16">
-          <use href="./images/icon.svg#icon-Vector-1"></use>
+          <use href="./images/icons.svg#icon-Vector-1"></use>
         </svg>
       </button>
-      <button type="button" class="contacts-section__button-franchise">
+      <button data-modal-contacts-section-open type="button" class="contacts-section__button-franchise">
         Franchise
-        <svg class="contacts-section__icon" width="8" height="16">
-          <use href="./images/icon.svg#icon-Vector-2"></use>
+        <svg  class="contacts-section__icon" width="8" height="16">
+          <use href="./images/icons.svg#icon-Vector-2"></use>
         </svg>
       </button>
     </div>
+  </div>
+  <div data-modal-contacts-section class="contacts-section-data-modal contacts-section-data-modal--hidden">
+      <div class="contacts-section-data-modal__window">
+        <b class="contacts-section-data-modal__title">LEAVE YOUR DATA, WE WILL CALL YOU</b>
+        <button data-modal-contacts-section-close type="button" class="contacts-section-data-modal__closing">
+            <svg class="contacts-section-data-modal__icon">
+              <use href="./images/icons.svg#icon-mobile-close-icon"></use>
+            </svg>
+        </button>
+        <form class="main-form">
+          <div class="main-form__field">
+              <label for="user-name" class="main-form__label">Name</label>
+              <input class="main-form__input" type="text" name="user-name" id="user-name">
+              <svg class="main-form-icon">
+                <use href="./images/icons.svg#icon-person-form"></use>
+              </svg>
+          </div>
+          <div class="main-form__field">
+            <label for="user-phone" class="main-form__label">Phone number</label>
+            <input class="main-form__input" type="tel" name="user-phone" id="user-phone">
+            <svg class="main-form-icon">
+              <use href="./images/icons.svg#icon-phone-form"></use>
+            </svg>
+          </div>
+          <div class="main-form__field">
+            <label for="user-mail" class="main-form__label">Email</label>
+            <input class="main-form__input" type="email" name="user-mail" id="user-mail">
+            <svg class="main-form-icon">
+              <use href="./images/icons.svg#icon-email-form"></use>
+            </svg>
+          </div>
+          <div class="main-form__field">
+            <label for="user-comment" class="main-form__label">Comment</label>
+            <textarea class="main-form__textarea" name="user-comment" id="user-comment" rows="10" placeholder="Enter text"></textarea>
+          </div>
+          <div class="main-form__field main-form__field--check">
+            <label for="user-agreement" class="main-form__text">
+              <input  class="main-form__checkbox" type="checkbox" id="user-agreement" value="agreement">
+              <span class="main-form__tick"></span>
+                I agree to the newsletter and accept
+              <a class="main-form__link" href="#">Terms of an agreement</a>
+            </label>
+          </div>
+          <button class="contacts-section__form-button" type="submit">Send</button>
+        </form>                     
+      </div>
   </div>
 </section>
