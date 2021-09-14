@@ -48,3 +48,18 @@
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
 }
+
+%main-form__styles {
+    cursor: pointer;
+    outline: none;
+
+    transition-property: all;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}
+
+%main-form__border {
+    border: 1px solid $third-product-card-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
