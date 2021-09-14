@@ -48,6 +48,7 @@
     top: 0;
     right: 0;
     background-color: $mobile-menu-background;
+    
     border: none;
     transition: fill 250ms $transition-timing-function;
 
@@ -55,6 +56,10 @@
     &:focus{
         fill: $button-hover-background;
     }
+}
+
+.modal__close{
+    fill: $light-text-color;
 }
 
 .modal__button-buy{
