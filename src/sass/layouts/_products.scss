@@ -427,14 +427,16 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-sizing: content-box;
   border: none;
   margin-left: auto;
   margin-right: auto;
+  background-image: url('../images/arrow-right.png');
+  background-size: contain;
+  cursor: pointer;
 }
 
-.products-section__icon {
-  // fill: $main-title-color;
-  width: 40px;
-  height: 40px;
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products-section__button {
+    background-image: url('../images/arrow-right@2x.png');
+  }
 }

@@ -30,6 +30,14 @@ h1 {
     }
   }
 
+  &__item {
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   &__item:not(:last-child) {
     margin-right: 35px;
   }
@@ -75,6 +83,8 @@ h1 {
 
   @media screen and (min-width: 1280px) {
     margin-right: auto;
+    position: relative;
+    left: -70px;
   }
 }
 
@@ -142,6 +152,35 @@ h1 {
 }
 
 // Hero
+
+.hero__icecream-img {
+  display: block;
+  margin-left: 25%;
+  margin-top: 5%;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 12%;
+  }
+}
+
+.baby-img {
+  display: block;
+}
+
+.milk-img {
+  &:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    position: relative;
+    left: -40px;
+  }
+}
+
 .hero-container {
   position: relative;
   display: flex;
@@ -155,6 +194,10 @@ h1 {
   @media screen and (min-width: 1280px) {
     max-width: 1280px;
   }
+}
+
+.milk-container__text {
+  padding-bottom: 10px;
 }
 
 .hero__text {
@@ -217,11 +260,30 @@ h1 {
 .hero__links {
   display: flex;
   position: relative;
-  margin-bottom: 66px;
   font-family: $main-font-family;
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 110px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__milk-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: 300px;
+
+  @media screen and (min-width: 1280px) {
+    max-width: 500px;
+  }
+
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1280px) {
+      margin-left: 30px;
+    }
   }
 }
 
@@ -308,46 +370,11 @@ h1 {
   font-size: 8px;
   line-height: 1.4;
 
-  margin: 0 0 0 120px;
   @media screen and (min-width: 1280px) {
     font-size: 14px;
     width: 200px;
     margin-bottom: 10px;
-    margin-left: 200px;
   }
-
-  &::after {
-    content: ' ';
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    width: 124px;
-    height: 126px;
-    background-size: contain;
-    background-image: url(/images/tab-milk-hero.png);
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/tab-milk-hero@2x.png);
-    }
-
-    @media screen and (min-width: 1280px) {
-      width: 188px;
-      height: 191px;
-      left: -40px;
-      top: 260px;
-
-      background-image: url(/images/desk-milk-hero.png);
-
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(/images/desk-milk-hero@2x.png);
-      }
-    }
-  }
-}
-
-.btn-arrow {
-  width: 10px;
-  height: 10px;
 }
 
 .hero__milk-btn {
@@ -357,8 +384,6 @@ h1 {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-
-  margin: 7px 0 0 120px;
 
   transition: background-color 250ms ease-in-out;
 
@@ -370,7 +395,6 @@ h1 {
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
-    margin-left: 200px;
   }
 }
 
@@ -381,39 +405,21 @@ h1 {
 
   @media screen and (min-width: 1280px) {
     right: 110px;
-    top: 156px;
   }
+}
 
-  &::before {
-    content: ' ';
-    position: absolute;
+.right-decor__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 80px;
+  margin-left: auto;
+  margin-bottom: 32%;
+  padding-top: 10px;
 
-    top: 173px;
-    right: 0;
-
-    width: 168px;
-    height: 133px;
-
-    background-size: contain;
-
-    background-image: url(/images/tab-baby-hero.png);
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/tab-baby-hero@2x.png);
-    }
-
-    @media screen and (min-width: 1280px) {
-      width: 293px;
-      height: 232px;
-      top: 280px;
-      right: 10px;
-
-      background-image: url(/images/desk-baby-hero.png);
-
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(/images/desk-baby-hero@2x.png);
-      }
-    }
+  @media screen and (min-width: 1280px) {
+    padding-top: 10%;
+    margin-bottom: 45%;
   }
 }
 
@@ -448,6 +454,8 @@ h1 {
     @media screen and (min-width: 1280px) {
       width: 30px;
       height: 30px;
+
+      right: -15px;
     }
   }
 
@@ -460,6 +468,13 @@ h1 {
     font-size: 28px;
     font-weight: 400;
     line-height: 1.4;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3);
+    }
 
     @media screen and (min-width: 1280px) {
       font-size: 46px;
@@ -481,21 +496,6 @@ h1 {
   top: 79px;
   left: 15%;
   background-color: $title-label-color;
-
-  &::after {
-    content: ' ';
-    position: absolute;
-    bottom: -75px;
-    left: 80px;
-    width: 171px;
-    height: 410px;
-    background-size: contain;
-    background-image: url(/images/mob-hero-icecream.png);
-
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url(/images/mob-hero-icecream@2x.png);
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -504,20 +504,6 @@ h1 {
     top: 31px;
     width: 322px;
     height: 322px;
-
-    &::after {
-      bottom: -47px;
-      left: 70px;
-
-      width: 143px;
-      height: 336px;
-
-      background-image: url(/images/tab-hero-icecream.png);
-
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(/images/tab-hero-icecream@2x.png);
-      }
-    }
   }
 }
 
@@ -527,20 +513,6 @@ h1 {
     top: 52px;
     width: 538px;
     height: 538px;
-
-    &::after {
-      bottom: -75px;
-      left: 117px;
-
-      width: 236px;
-      height: 557px;
-
-      background-image: url(/images/desk-hero-icecream.png);
-
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url(/images/desk-hero-icecream@2x.png);
-      }
-    }
   }
 }
 
@@ -636,6 +608,10 @@ h1 {
   .hero__milk-dscr {
     display: none;
   }
+
+  .milk-img {
+    display: none;
+  }
 }
 
 .mobile-nav {
@@ -684,4 +660,27 @@ h1 {
   position: absolute;
   top: 331px;
   left: 0;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
