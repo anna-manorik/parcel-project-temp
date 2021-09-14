@@ -376,16 +376,19 @@
   color: $light-text-color;
   font-size: 8px;
   line-height: 1.4;
+  margin-bottom: 10px;
 
   @media screen and (min-width: 1280px) {
     font-size: 14px;
     width: 200px;
-    margin-bottom: 10px;
   }
 }
 
 .hero__milk-btn {
   background-color: #f3f3f3;
+
+  // display: flex;
+  // align-items: center;
 
   border-style: none;
   width: 18px;
@@ -564,7 +567,22 @@
 
 .btn-tablet {
   display: inline-block;
-  margin-right: 10px;
+
+  position: relative;
+  transition: 0.5s;
+
+  .buy-now-btn:hover & {
+    margin-right: 10px;
+  }
+}
+
+.btn-arrow {
+  opacity: 0;
+  transition: 0.5s;
+
+  .buy-now-btn:hover & {
+    opacity: 1;
+  }
 }
 
 .buy-now-btn {
