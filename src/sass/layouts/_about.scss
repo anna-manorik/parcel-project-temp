@@ -4,7 +4,7 @@
   @media screen and (max-width: 767px) {
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 750px;
+    background-position: right 50% top 700px;
     background-size: 100vw;
     background-image: url(/images/about__bgi--mob.png);
   }
@@ -14,7 +14,7 @@
     background-image: url(/images/about__bgi--mob@2x.png);
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 750px;
+    background-position: right 50% top 700px;
     background-size: 100vw;
   }
 
@@ -25,7 +25,7 @@
   @media screen and (min-width: 1280px) {
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 342px;
+    background-position: right 50% top 50%;
     background-size: 100vw;
     background-image: url(/images/about__bgi--desk.png);
   }
@@ -35,7 +35,7 @@
     background-image: url(/images/about__bgi--desk@2x.png);
     padding: 125px 0 40px;
     background-repeat: no-repeat;
-    background-position: right 50% top 342px;
+    background-position: right 50% top 50%;
     background-size: 100vw;
   }
 }
@@ -242,7 +242,7 @@
 .about__modal {
   position: absolute;
   width: 90vw;
-  height: 80vh;
+  max-height: 80vh;
   top: 50%;
   left: 50%;
   padding: 0px 15px 20px;
@@ -250,8 +250,8 @@
   background: $light-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  overflow: scroll;
+  border-radius: 20px;
+  overflow: auto;
 
   @media screen and (min-width: 768px) {
     padding: 0 30px 40px;
@@ -268,6 +268,23 @@
 
   @media screen and(min-width:768px) {
     height: 90px;
+  }
+}
+
+.about__modal-title {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
   }
 }
 
@@ -290,15 +307,24 @@
 
 .about__modal-text {
   color: $middle-text-color;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 1.76;
     letter-spacing: 0.04em;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
   @media screen and (min-width: 1280px) {
     font-size: 24px;
     line-height: 1.76;
     letter-spacing: 0.04em;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
