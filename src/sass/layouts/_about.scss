@@ -231,7 +231,7 @@
   transition: opacity $transition-duration $transition-timing-function,
     visibility $transition-duration $transition-timing-function;
 
-  z-index: 2;
+  z-index: 1000;
 }
 
 .about__backdrop.is-hidden {
