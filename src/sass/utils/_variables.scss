@@ -8,9 +8,9 @@ $slide-homepage-color: #d31342;
 $section-light-background: #e5e5e5;
 $section-dark-background: #fff5f6;
 $light-text-color: #ffffff;
-$middle-text-color: #907e82;
+$second-product-card-color: #907e82;
 $dark-text-color: #000000;
-$second-product-card-color: #f0d1a5;
+$middle-text-color: #f0d1a5;
 $third-product-card-color: #c2e297;
 $feedback-background-color: #fafafa;
 $feedback-quotes-color: #e1e1e1;
@@ -19,6 +19,7 @@ $button-hover-background: #ecebeb;
 $mobile-menu-background: #e17992;
 $mobile-menu-border: #e18298;
 $contacts-section-shadow-color: rgba(212, 20, 67, 0.1);
+$bd-color: rgba(0, 0, 0, 0.2);
 
 $main-font-family: DM Sans, sans-serif;
 $title-font-family: Titan One, cursive;
@@ -30,3 +31,9 @@ $desktop: 1280px;
 
 $transition-duration: 250ms;
 $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Shadow
+$contacts-section-form-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
