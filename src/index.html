@@ -37,6 +37,7 @@
       <include src="./partials/modal.html"></include>
     </main>
 
+    <div class="to-top">TO TOP</div>
     <!-- Mobile menu -->
     <div class="mobile-menu js-menu-container mob-menu-container" id="mobile-menu">
       <button class="menu-close-btn js-close-menu">
@@ -79,5 +80,22 @@
     <script src="./js/basket.js"></script>
     <script src="./js/about_modal.js"></script>
     <script defer src="/js/contacts-section-modal.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+    <script type="text/javascript">
+      $(function() {
+      $(window).scroll(function() {
+      if($(this).scrollTop() != 0) {
+      $('.to-top').fadeIn();
+      } else {
+      $('.to-top').fadeOut();
+      }
+      });
+      $('.to-top').click(function() {
+      $('body,html').animate({scrollTop:0},800);
+      });
+      });
+    </script>
   </body>
 </html>
