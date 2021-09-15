@@ -433,6 +433,12 @@
   background-image: url('../images/arrow-right.png');
   background-size: contain;
   cursor: pointer;
+  transition: transform 250ms linear;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
