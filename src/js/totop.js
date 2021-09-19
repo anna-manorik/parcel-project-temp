@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
       $(function() {
       $(window).scroll(function() {
       if($(this).scrollTop() != 0) {
@@ -11,4 +11,4 @@
       $('body,html').animate({scrollTop:0},800);
       });
       });
-    </script>
+
