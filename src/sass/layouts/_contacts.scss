@@ -412,8 +412,10 @@
 
 .main-form__textarea {
     @extend %main-form__styles, %main-form__border;
-
+    
     padding: 12px 16px;
+
+    resize: none;
 
     &::placeholder {
         font-weight: 400;
@@ -421,7 +423,7 @@
         line-height: 1.17;
         letter-spacing: 0.01em;
 
-        color: $second-product-card-color;
+        color: $middle-text-color;
     }
 }
 
@@ -497,7 +499,7 @@
 }
 
 .main-form__link{
-    color: $third-product-card-color;
+    color: $light-text-color;
     margin-left: 3px;
 }
 
@@ -517,6 +519,6 @@
 
     &:focus, &:hover {
         background-color: $location-button-background;
-        color: $middle-text-color;
+        color: $light-text-color;
     }
 }
